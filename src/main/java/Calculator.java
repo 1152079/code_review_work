@@ -13,14 +13,20 @@ public class Calculator {
         }
     }
     public int times(int a, int b){
-
         return a * b;
     }
-    public double solver(double a, double b) {
-        if (a != 0) {
-            return -b / a;
+    public double[] solver(int a, int b, int c) {
+        // Решение уравнения вида ax^2 + bx + c = 0
+        int discriminant = b * b - 4 * a * c;
+
+        if (discriminant < 0) {
+            throw new ArithmeticException("Уравнение не имеет действительных корней");
+        } else if (discriminant == 0) {
+            return new double[]{-b / (2.0 * a)};
         } else {
-            throw new IllegalArgumentException("Уравнение не является линейным");
+            double root1 = (-b + Math.sqrt(discriminant)) / (2.0 * a);
+            double root2 = (-b - Math.sqrt(discriminant)) / (2.0 * a);
+            // Возвращаем массив корней для упрощения
         }
     }
 
