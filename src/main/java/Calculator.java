@@ -27,7 +27,6 @@ public class Calculator {
             double root1 = (-b + Math.sqrt(discriminant)) / (2.0 * a);
             double root2 = (-b - Math.sqrt(discriminant)) / (2.0 * a);
             // Возвращаем массив корней для упрощения
-            return new double[]{root1, root2};
         }
     }
 

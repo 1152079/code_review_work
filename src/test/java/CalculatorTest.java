@@ -38,6 +38,11 @@ class CalculatorTest {
     @Test
     void solver() {
         Calculator calculator = new Calculator();
+        // Тест для линейного уравнения ax + b = 0
+        double a = 2;
+        double b = -6;
+        double result = calculator.solver(a, b);
+        assertEquals(3.0, result, 0.0001);  // Проверяем, что результат равен 3 с погрешностью 0.0001
         double[] result = calculator.solver(1, -6, 9);
         assertArrayEquals(new double[]{3}, result);
     }
